@@ -10,7 +10,11 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import io
 
-model = tf.keras.models.load_model('crop_disease_model_best.h5')
+# Change this:
+# model = tf.keras.models.load_model('crop_disease_model_best.h5')
+
+# To this:
+model = tf.keras.models.load_model('crop_disease_model_best.h5', compile=False)
 
 CLASS_NAMES = [
     'Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_rust', 'Apple___healthy',
