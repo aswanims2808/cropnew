@@ -331,6 +331,5 @@ with gr.Blocks(css=CSS, title="🌿 Plant Disease AI") as demo:
     submit_btn.click(fn=analyze_leaf, inputs=[input_img], outputs=[cam_out, chart_out, report_out])
     clear_btn.click(fn=lambda: (None, None, None, ""), outputs=[input_img, cam_out, chart_out, report_out])
 
-import os
 # This ensures Gradio uses the port assigned by Render
 demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
